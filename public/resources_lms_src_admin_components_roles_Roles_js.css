@@ -1,0 +1,9 @@
+.table-header th {
+  cursor: pointer;
+  min-width: 200px;
+}
+.table-header__status, .table-header__action {
+  cursor: default !important;
+  width: 110px;
+  text-align: center;
+}

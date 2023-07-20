@@ -1,0 +1,446 @@
+.image-holder-wrapper {
+  max-width: 220px;
+  width: 100%;
+  height: 250px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media (max-width: 1139px) {
+  .image-holder-wrapper {
+    margin: auto;
+  }
+}
+
+.image-holder {
+  position: relative;
+  height: 250px;
+  border-radius: 10px;
+  background: gray;
+  object-fit: cover;
+}
+
+@media (max-width: 1139px) {
+  .user-detail-row {
+    flex-flow: column;
+  }
+}
+
+.user-details-card {
+  width: calc(100% - 220px);
+}
+@media (max-width: 1139px) {
+  .user-details-card {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+.user-details-card__item-container {
+  margin-left: 50px;
+}
+@media (max-width: 1139px) {
+  .user-details-card__item-container {
+    margin-top: 25px;
+    margin-left: 20px;
+  }
+}
+.user-details-card__item {
+  display: flex;
+  margin-bottom: 25px;
+}
+@media (max-width: 1139px) {
+  .user-details-card__item {
+    width: 100%;
+  }
+}
+@media (min-width: 1140px) {
+  .user-details-card__item {
+    margin: auto auto 25px auto;
+  }
+}
+.user-details-card__item-heading {
+  min-width: 110px;
+  font-weight: 700;
+}
+.user-details-card-form {
+  display: flex;
+}
+.user-details-card-form__item-header:after {
+  content: "*";
+  color: #FF0000;
+}
+
+.member-form {
+  display: flex;
+}
+.member-form__switch {
+  position: relative;
+  top: 3px;
+  height: 10px;
+}
+
+.member-profile__title {
+  margin-bottom: 9px;
+}
+
+@media only screen and (max-width: 700px) {
+  .member-form {
+    flex-direction: column;
+  }
+
+  .member-profile {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .primary-detail {
+    margin-top: 30px;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+html[dir=rtl] .save-action__save-btn {
+  float: left;
+  margin-left: 0;
+}
+html[dir=rtl] .save-action__cancel-btn {
+  float: left;
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.save-action {
+  margin-top: 10px;
+}
+.save-action__save-btn {
+  float: right;
+  margin-left: 10px;
+}
+.save-action__cancel-btn {
+  float: right;
+  margin-left: 10px;
+}
+@charset "UTF-8";
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+}
+
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc;
+}
+
+.control input:checked ~ .control__indicator {
+  background: #00C6FF;
+}
+
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #00C6FF;
+}
+
+.control input:disabled ~ .control__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.control__indicator:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+
+.control--checkbox .control__indicator:after {
+  left: 7px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid #FFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b;
+}
+
+.toggle-label {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+  margin-right: 10px;
+}
+
+.rbt-input-multi .rbt-input-hint-container {
+  display: inline-block !important;
+}
+
+.rbt-input-multi .rbt-input-wrapper {
+  margin-top: 5px !important;
+}
+
+.rbt-input {
+  height: auto;
+  min-height: 45px;
+}
+
+.input-form-group {
+  margin-bottom: 0 !important;
+}
+
+.rbt-input-hint {
+  top: 5px !important;
+}
+
+.react-datepicker-wrapper {
+  width: 86%;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+}
+.react-datepicker__input-container input {
+  width: 100%;
+  text-indent: 12px;
+  border-radius: unset !important;
+  border: 1px solid #e4e7ea;
+}
+
+.form__radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  position: relative;
+  background-color: #f1f1f1;
+  color: #666;
+  top: 10px;
+  height: 22px;
+  width: 22px;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 7px;
+  outline: none;
+}
+.form__label {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+  vertical-align: sub;
+}
+
+.form__radio:checked::before {
+  position: absolute;
+  font: 12px/1 "Open Sans", sans-serif;
+  left: 7px;
+  top: 4px;
+  content: "⅃";
+  color: #FFF;
+  transform: rotate(40deg);
+}
+
+.form__radio:hover {
+  background-color: #f7f7f7;
+}
+
+.form__radio:checked {
+  background-color: #00C6FF;
+}
+
+.react-select .input-group-text {
+  width: 38px;
+}
+.react-select__input {
+  width: calc(100% - 38px);
+}
+.react-select__input input {
+  height: auto;
+}
+.react-select__input--primary {
+  min-height: 43px;
+}
+.react-select__input--primary .css-1hwfws3,
+.react-select__input--primary .css-1fhf3k1-control,
+.react-select__input--primary .css-yk16xz-control {
+  min-height: 43px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.react-select__input--secondary {
+  min-height: 38px;
+}
+.react-select__input--secondary .css-1hwfws3,
+.react-select__input--secondary .css-1fhf3k1-control,
+.react-select__input--secondary .css-yk16xz-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.react-select__input .css-1ml51p6-MenuList div {
+  cursor: pointer;
+}
+.react-select__input .css-26l3qy-menu, .react-select__input .css-1w9j89e-menu {
+  z-index: 1234;
+}
+
+.custom-input-search input {
+  height: 38px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.react-img-cropper__img {
+  max-width: 100%;
+}
+
+html[dir=rtl] .modal-header .close {
+  margin: 0;
+  padding: 0;
+}
+html[dir=rtl] .modal-footer > :not(:last-child) {
+  margin-left: 10px;
+}
+
+@media (max-width: 400px) {
+  .date-picker-input {
+    flex-wrap: unset;
+  }
+}
+
+.switch-label .switch-slider::before {
+  z-index: unset;
+}
+
+.switch-label .switch-slider::after {
+  z-index: unset;
+}
+.image__holder {
+  position: relative;
+  width: 200px;
+  margin: auto;
+  border-radius: 10px;
+  background: gray;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .image__holder {
+    width: 185px;
+  }
+}
+.image__holder .btn-secondary:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.image__favicon-holder {
+  position: relative;
+  width: 120px;
+  margin: auto;
+  border-radius: 10px;
+  background: gray;
+  cursor: pointer;
+}
+.image__favicon-holder .btn-secondary:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.image__preview {
+  border-radius: 10px;
+  object-fit: cover;
+  text-align: center;
+  width: 100%;
+}
+.image__favicon-preview {
+  border-radius: 10px;
+  object-fit: cover;
+  text-align: center;
+}
+.image__dropdown-btn {
+  background-color: #e2e2e28f !important;
+  border: 0 !important;
+  position: absolute;
+  top: -146px;
+  left: 25%;
+  width: 100px;
+  height: 96px;
+  white-space: normal;
+  font-size: 13px;
+  font-weight: 700;
+}
+.image__favicon-dropdown-btn {
+  border: 0 !important;
+  position: absolute;
+  top: -96px;
+  left: 18%;
+  width: 74px;
+  height: 76px;
+  white-space: normal;
+  font-size: 13px;
+  font-weight: 700;
+}
+.image__dropdown-menu {
+  top: -37px !important;
+  left: -32px !important;
+}
+.image__favicon-dropdown-menu {
+  font-size: 13px;
+  min-width: 70px;
+  top: -37px !important;
+  left: -31px !important;
+}
+.image__avatar {
+  height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image__avatar-text {
+  height: auto;
+  background-color: #7d68f0;
+  color: white;
+  border-radius: 50%;
+  padding: 50px;
+  font-size: 50px;
+}
+.image__favicon-avatar {
+  height: 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image__favicon-avatar-text {
+  height: auto;
+  background-color: #7d68f0;
+  color: white;
+  border-radius: 50%;
+  padding: 50px;
+  font-size: 50px;
+}

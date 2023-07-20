@@ -1,0 +1,497 @@
+@charset "UTF-8";
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+}
+
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc;
+}
+
+.control input:checked ~ .control__indicator {
+  background: #00C6FF;
+}
+
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #00C6FF;
+}
+
+.control input:disabled ~ .control__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.control__indicator:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+
+.control--checkbox .control__indicator:after {
+  left: 7px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid #FFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b;
+}
+
+.toggle-label {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+  margin-right: 10px;
+}
+
+.rbt-input-multi .rbt-input-hint-container {
+  display: inline-block !important;
+}
+
+.rbt-input-multi .rbt-input-wrapper {
+  margin-top: 5px !important;
+}
+
+.rbt-input {
+  height: auto;
+  min-height: 45px;
+}
+
+.input-form-group {
+  margin-bottom: 0 !important;
+}
+
+.rbt-input-hint {
+  top: 5px !important;
+}
+
+.react-datepicker-wrapper {
+  width: 86%;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+}
+.react-datepicker__input-container input {
+  width: 100%;
+  text-indent: 12px;
+  border-radius: unset !important;
+  border: 1px solid #e4e7ea;
+}
+
+.form__radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  position: relative;
+  background-color: #f1f1f1;
+  color: #666;
+  top: 10px;
+  height: 22px;
+  width: 22px;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 7px;
+  outline: none;
+}
+.form__label {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+  vertical-align: sub;
+}
+
+.form__radio:checked::before {
+  position: absolute;
+  font: 12px/1 "Open Sans", sans-serif;
+  left: 7px;
+  top: 4px;
+  content: "⅃";
+  color: #FFF;
+  transform: rotate(40deg);
+}
+
+.form__radio:hover {
+  background-color: #f7f7f7;
+}
+
+.form__radio:checked {
+  background-color: #00C6FF;
+}
+
+.react-select .input-group-text {
+  width: 38px;
+}
+.react-select__input {
+  width: calc(100% - 38px);
+}
+.react-select__input input {
+  height: auto;
+}
+.react-select__input--primary {
+  min-height: 43px;
+}
+.react-select__input--primary .css-1hwfws3,
+.react-select__input--primary .css-1fhf3k1-control,
+.react-select__input--primary .css-yk16xz-control {
+  min-height: 43px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.react-select__input--secondary {
+  min-height: 38px;
+}
+.react-select__input--secondary .css-1hwfws3,
+.react-select__input--secondary .css-1fhf3k1-control,
+.react-select__input--secondary .css-yk16xz-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.react-select__input .css-1ml51p6-MenuList div {
+  cursor: pointer;
+}
+.react-select__input .css-26l3qy-menu, .react-select__input .css-1w9j89e-menu {
+  z-index: 1234;
+}
+
+.custom-input-search input {
+  height: 38px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.react-img-cropper__img {
+  max-width: 100%;
+}
+
+html[dir=rtl] .modal-header .close {
+  margin: 0;
+  padding: 0;
+}
+html[dir=rtl] .modal-footer > :not(:last-child) {
+  margin-left: 10px;
+}
+
+@media (max-width: 400px) {
+  .date-picker-input {
+    flex-wrap: unset;
+  }
+}
+
+.switch-label .switch-slider::before {
+  z-index: unset;
+}
+
+.switch-label .switch-slider::after {
+  z-index: unset;
+}
+.rdt_TableHead {
+  vertical-align: bottom;
+  border-bottom: 1px solid #c8ced3;
+}
+.rdt_TableHead .rdt_TableHeadRow .sc-ifAKCX {
+  border-left: 1px solid #c8ced3 !important;
+  min-height: 54px;
+}
+.rdt_TableHead .rdt_TableHeadRow .sc-ifAKCX:first-child {
+  border-left: 0 !important;
+}
+
+.uZNoG {
+  border: 1px solid #c8ced3;
+  border-radius: 5px;
+  padding: 6px;
+  margin: 0;
+}
+
+.eWVAiH {
+  height: 31px;
+}
+
+.jaFrsL {
+  min-width: 27px;
+}
+
+.jNSZEp {
+  border-top: 1px solid #c8ced3;
+  border-bottom: 1px solid #c8ced3;
+  border-right: 1px solid #c8ced3;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-left: -2px;
+  margin-right: 30px;
+}
+
+.jNSZEp svg {
+  top: 4px;
+}
+
+#pagination-first-page {
+  border: 1px solid #c8ced3;
+  outline: none;
+}
+#pagination-first-page:hover:not(:disabled) svg {
+  fill: #FFF;
+}
+#pagination-first-page:focus {
+  border: 1px solid #00C6FF;
+}
+
+#pagination-previous-page {
+  border: 1px solid #c8ced3;
+  outline: none;
+}
+#pagination-previous-page:hover:not(:disabled) svg {
+  fill: #FFF;
+}
+#pagination-previous-page:focus {
+  border: 1px solid #00C6FF;
+}
+
+#pagination-next-page {
+  border: 1px solid #c8ced3;
+  outline: none;
+}
+#pagination-next-page:hover:not(:disabled) svg {
+  fill: #FFF;
+}
+#pagination-next-page:focus {
+  border: 1px solid #00C6FF;
+}
+
+#pagination-last-page {
+  border: 1px solid #c8ced3;
+  outline: none;
+}
+#pagination-last-page:hover:not(:disabled) svg {
+  fill: #FFF;
+}
+#pagination-last-page:focus {
+  border: 1px solid #00C6FF;
+}
+
+.sc-iAyFgw {
+  margin-left: 10px;
+}
+
+.sc-kEYyzF {
+  margin-right: 10px;
+}
+
+.rdt_TableRow .rdt_TableCell {
+  border-left: 1px solid #c8ced3;
+  font-size: 14px;
+  min-height: 54px;
+  color: #23282c;
+}
+.rdt_TableRow .rdt_TableCell:first-child {
+  border-left: 0;
+}
+
+/* This class name should be renamed as the package has been updated
+    Purpose for this class name is to be provide a specified width for sort icon aligned on table header
+ */
+.caUhkS span.__rdt_custom_sort_icon__ i {
+  width: auto !important;
+  height: auto !important;
+  font-size: 12px !important;
+}
+
+/* This class name should be renamed as the package has been updated
+    Purpose for this class name is to be unset an initial opacity for asc sorted icon
+ */
+.caUhkS span.__rdt_custom_sort_icon__.asc i {
+  opacity: unset;
+  transform: none !important;
+}
+
+/* This class name should be renamed as the package has been updated
+    Purpose for this class name is to be override an opacity of  default class name by asc icon
+ */
+.caUhkS span.__rdt_custom_sort_icon__.asc i.sort-arrow-group__visible {
+  opacity: 0.5;
+}
+
+/* This class name should be renamed as the package has been updated
+    Purpose for this class name is to be override an opacity of default class name by desc icon
+ */
+.caUhkS span.__rdt_custom_sort_icon__.desc i.sort-arrow-group__visible {
+  opacity: 0.5;
+}
+
+/* This class name should be renamed as the package has been updated
+     Purpose for this class name is to be provide a specified width for sort icon aligned on table header at the time of hovered
+ */
+.jWjBKP span.__rdt_custom_sort_icon__ i, .jWjBKP span.__rdt_custom_sort_icon__ svg {
+  width: auto !important;
+  height: auto !important;
+  font-size: 12px !important;
+  transform: none !important;
+}
+
+/* This class name should be renamed as the package has been updated
+    Purpose for this class name is to be override default opacity when sorted header icon should be hovered
+ */
+.jWjBKP:hover span, .jWjBKP:hover span.__rdt_custom_sort_icon__ * {
+  opacity: 0.8 !important;
+}
+
+.rdt_TableCol_Sortable {
+  position: relative;
+  width: 100%;
+}
+.rdt_TableCol_Sortable span {
+  position: absolute;
+  right: 0;
+  width: 25px;
+  top: 10px;
+}
+
+.search-filter-container, .search-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.search-filter-container__filter-input, .search-container__filter-input {
+  min-width: 255px;
+  margin-right: 16px;
+}
+.search-filter-container__date-range-picker, .search-container__date-range-picker {
+  margin-right: 16px;
+}
+.search-filter-container__search-input, .search-container__search-input {
+  width: 255px;
+}
+
+@media (max-width: 636px) {
+  .search-filter-container__filter-input {
+    min-width: 200px;
+  }
+
+  .search-filter-container__search-input {
+    width: 200px;
+  }
+}
+@media (max-width: 518px) {
+  .search-filter-container {
+    flex-direction: column;
+  }
+
+  .search-filter-container__filter-input {
+    min-width: 100%;
+  }
+
+  .search-filter-container__search-input {
+    width: auto;
+  }
+}
+.rdt_TableHead .rdt_TableHeadRow .sc-ifAKCX:last-child {
+  padding-left: calc(48px / 2);
+}
+
+html[dir=rtl] .rdt_TableRow .rdt_TableCell:first-child,
+html[dir=rtl] .rdt_TableHead .rdt_TableHeadRow .sc-ifAKCX:first-child {
+  border-left: 1px solid #c8ced3 !important;
+}
+html[dir=rtl] .rdt_TableRow .rdt_TableCell:last-child,
+html[dir=rtl] .rdt_TableHead .rdt_TableHeadRow .sc-ifAKCX:last-child {
+  border-left: 0 !important;
+}
+html[dir=rtl] .rdt_TableCol_Sortable span {
+  left: 0;
+  right: auto;
+}
+html[dir=rtl] .sc-hSdWYo:not(first-child) {
+  unicode-bidi: plaintext;
+  direction: rtl;
+}
+html[dir=rtl] .sc-kEYyzF {
+  margin-right: 20px;
+}
+html[dir=rtl] .jNSZEp svg {
+  right: unset;
+  left: 0;
+}
+html[dir=rtl] .search-filter-container__filter-input, html[dir=rtl] .search-container__filter-input {
+  margin-right: unset;
+  margin-left: 16px;
+}
+.container-border, .empty-component--maxi, .empty-component--mini {
+  border: 1px solid #c8ced3;
+  border-radius: 0.25rem;
+}
+
+.empty-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.empty-component--mini {
+  height: 30vh;
+}
+.empty-component--mid {
+  height: 67vh;
+}
+.empty-component--maxi {
+  height: 70vh;
+}
+.empty-component--too-short {
+  height: 36vh;
+}
+.empty-component__title {
+  margin: 7px 10px 10px;
+}
+.date-picker {
+  font-size: 14px;
+}
+.date-picker .list-group .list-group-item {
+  padding: 0.4rem 1.25rem;
+  border: unset;
+}
+.date-picker .list-group .list-group-item:hover {
+  cursor: pointer;
+  background: #00C6FF;
+  border-radius: 0.25rem;
+}
+.date-picker__child-popover .popover {
+  min-width: 700px;
+}
+
+.input-group .form-control {
+  background-color: white;
+}
+.book-name {
+  cursor: pointer;
+}

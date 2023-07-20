@@ -1,0 +1,43 @@
+.book-history-detail__modal {
+  max-width: 700px;
+}
+.book-history-detail__item-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 660px) {
+  .book-history-detail__item-container {
+    width: 100%;
+    flex-flow: column;
+  }
+}
+.book-history-detail__item {
+  display: flex;
+  margin-bottom: 25px;
+  width: 40%;
+}
+@media (max-width: 660px) {
+  .book-history-detail__item {
+    width: 100%;
+  }
+}
+.book-history-detail__item-heading {
+  width: 120px;
+  font-weight: 700;
+}
+.book-history-detail__item-name {
+  display: flex;
+  margin-bottom: 25px;
+  width: 100%;
+}
+.book-history-detail__item-name-heading {
+  min-width: 120px;
+  font-weight: 700;
+}
+.book-history-detail__item-note {
+  display: flex;
+  margin-bottom: 25px;
+}
+.books-circulation-table-row {
+  cursor: pointer;
+}
